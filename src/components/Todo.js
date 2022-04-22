@@ -20,9 +20,7 @@ function Todo(props) {
     fetch(patchUrl, {
       method: "PATCH"
     }).then((response) => {
-      if (!response.ok) {
-        alert("Completing task failed");
-      }
+        response.json();
       props.getItems();
     });
   }
